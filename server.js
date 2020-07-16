@@ -17,8 +17,7 @@ app.use(expresslayouts)
 app.use(express.static('public'))
 
 const mongoose = require('mongoose')
-mongoose.connect(process.env.DATABASE_URL, {
-useNewUrlParser:true, useUnifiedTopology: true})
+mongoose.connect(process.env.DATABASE_URI, { useUnifiedTopology: true})
 const db = mongoose.connection
 // db.on('error', error => console.error(error))
 db.once('open', () => console.log('conneceted to mongoose'))
@@ -26,4 +25,4 @@ db.once('open', () => console.log('conneceted to mongoose'))
 
 app.use('/', indexRouter)
 
-app.listen(process.env.PORT || 3000) 
+app.listen(process.env.PORT || 5000) 
