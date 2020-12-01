@@ -4,13 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>realdata</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/home.css" />
+    <link rel="stylesheet"  href="/stylesheets/bookappointment.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/about.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/contactus.css" />
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>CEMA MEDICALS</title>
+ 
 </head>
 <body>
-    before
-    <br>
+ <%-include ('../partials/header.ejs') %>
     <%- body %>
-    <br>
-    After
-</body>
+    <%-include ('../partials/footer.ejs') %>
+    
+    
+ </body>
+<script src="/javascripts/homescripts.js" defer></script>
+<script src="/javascripts/bookappointmentscripts.js" defer></script>
 </html>
