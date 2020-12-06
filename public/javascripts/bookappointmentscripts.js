@@ -1,26 +1,17 @@
-function resetClass(element, classname) {
-    element.classList.remove(classname);
-}
-document.getElementsByClassName("show-signup")[0].addEventListener("click", function(){
-    let form = document.getElementsByClassName("form")[0];
-    resetClass(form, "signin");
-    resetClass(form, "reset");
-    form.classList.add("signup");
-    document.getElementById("submit-btn").innerText = "Sign Up";
+const loginText = document.querySelector(".title-text .login");
+const loginForm = document.querySelector("form.login");
+const loginBtn = document.querySelector("label.login");
+const signupBtn = document.querySelector("label.signup");
+const signupLink = document.querySelector("form .signup-link a");
+signupBtn.onclick = (()=>{
+  loginForm.style.marginLeft = "-50%";
+  loginText.style.marginLeft = "-50%";
 });
-
-document.getElementsByClassName("show-signin")[0].addEventListener("click", function(){
-    let form = document.getElementsByClassName("form")[0];
-    resetClass(form, "signup");
-    resetClass(form, "reset");
-    form.classList.add("signin");
-    document.getElementById("submit-btn").innerText = "Sign In";
+loginBtn.onclick = (()=>{
+  loginForm.style.marginLeft = "0%";
+  loginText.style.marginLeft = "0%";
 });
-
-document.getElementsByClassName("show-reset")[0].addEventListener("click", function(){
-    let form = document.getElementsByClassName("form")[0];
-    resetClass(form, "signup");
-    resetClass(form, "signin");
-    form.classList.add("reset");
-    document.getElementById("submit-btn").innerText = "Reset Password";
-}); 
+signupLink.onclick = (()=>{
+  signupBtn.click();
+  return false;
+});
